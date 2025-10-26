@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uangku.id 💸</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>✨ Uangku.id 💚</h1>
+      <p class="subtitle">Catat keuanganmu dengan gaya 😎</p>
+       <!-- 🌙 Tambahan baru buat dark mode & tema -->
+  <div class="top-controls">
+    <button id="theme-toggle" title="Ganti mode">🌙</button>
+    <select id="color-theme">
+      <option value="default">💚 Hijau</option>
+      <option value="pink">💗 Pink</option>
+      <option value="purple">💜 Ungu</option>
+      <option value="blue">💙 Biru</option>
+    </select>
+  </div>
+    </header>
+
+    <section class="balance-card glass fade-in">
+      <h2>Saldo Saat Ini</h2>
+      <p id="balance">Rp 0</p>
+    </section>
+    
+    <!-- 🎂 Chart area -->
+<canvas id="chart" class="glass fade-in" style="margin-top:10px;"></canvas>
+
+    <form id="transaction-form" class="glass slide-up">
+      <input type="text" id="desc" placeholder="Catatan (misal: kopi, gaji...)" required />
+      <input type="number" id="amount" placeholder="Jumlah" required />
+      <select id="type">
+        <option value="income">💰 Pemasukan</option>
+        <option value="expense">💸 Pengeluaran</option>
+      </select>
+      <button type="submit" class="btn-add">+ Tambah Transaksi</button>
+    </form>
+
+    <!-- 🌼 Filter & Ekspor -->
+<div class="filters glass fade-in">
+  <input type="month" id="month-filter" />
+  <button id="export-btn">📤 Ekspor CSV</button>
+</div>
+
+    
+    <h3 class="fade-in">📜 Riwayat Transaksi</h3>
+    <ul id="transaction-list" class="glass list fade-in"></ul>
+  </div>
+
+  <footer>
+    <p>© 2025 <strong>Uangku.id</strong> — Simpel, Lucu, dan Bermanfaat 💚</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
