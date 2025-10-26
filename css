@@ -1,0 +1,217 @@
+/* ======================================================
+   🩷 Uangku.id — Tampilan Modern & Lucu
+   ====================================================== */
+
+/* Font dan gaya dasar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  transition: background 0.5s ease, color 0.3s ease;
+  color: var(--text);
+  padding: 20px;
+}
+
+/* ======================================================
+   🌈 Variabel Warna Tema
+   ====================================================== */
+:root {
+  --text: #222;
+  --card-bg: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Default tema (Hijau) */
+body.green {
+  --bg1: #d7fbe8;
+  --bg2: #a7e9af;
+}
+
+/* Tema Pink */
+body.pink {
+  --bg1: #ffd6e8;
+  --bg2: #ffb3c6;
+}
+
+/* Tema Ungu */
+body.purple {
+  --bg1: #e0c3fc;
+  --bg2: #8ec5fc;
+}
+
+/* Tema Biru */
+body.blue {
+  --bg1: #a8edea;
+  --bg2: #fed6e3;
+}
+
+/* ======================================================
+   🌙 Mode Gelap
+   ====================================================== */
+body.dark {
+  --text: #f5f5f5;
+  --card-bg: rgba(30, 30, 30, 0.6);
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+}
+
+/* ======================================================
+   🧭 Header (judul + tema + tombol)
+   ====================================================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Dropdown tema */
+#themeSelect {
+  border: none;
+  background: var(--card-bg);
+  padding: 6px 10px;
+  border-radius: 10px;
+  box-shadow: var(--glass-shadow);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+
+/* Tombol dark mode */
+#darkToggle {
+  border: none;
+  background: var(--card-bg);
+  padding: 6px 10px;
+  border-radius: 10px;
+  box-shadow: var(--glass-shadow);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  margin-left: 10px;
+}
+
+/* ======================================================
+   💰 Card Saldo
+   ====================================================== */
+#balance-card {
+  background: var(--card-bg);
+  box-shadow: var(--glass-shadow);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#balance {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* ======================================================
+   📊 Grafik
+   ====================================================== */
+#chart {
+  max-width: 300px;
+  margin: 10px 0 20px;
+}
+
+/* ======================================================
+   📝 Form Input Transaksi
+   ====================================================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  width: 100%;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(8px);
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+}
+
+input, select {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(5px);
+}
+
+button {
+  background: #2b7a78;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* ======================================================
+   📋 Daftar Transaksi
+   ====================================================== */
+ul {
+  list-style: none;
+  max-width: 400px;
+  width: 100%;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  box-shadow: var(--glass-shadow);
+  border-radius: 12px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.3s ease;
+}
+
+.delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* ======================================================
+   ✨ Animasi & Efek
+   ====================================================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
