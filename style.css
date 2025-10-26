@@ -1,61 +1,52 @@
 /* ===========================================================
-   💚 Uangku.id
+   💚 Uangku.id — Layout Versi Super Rapi (Glassmorphism)
    =========================================================== */
-
-/* 🌈 Font & Reset */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 
 body {
   background: linear-gradient(135deg, #b8f0c2, #a1e1ba);
   color: #333;
+  font-family: "Poppins", sans-serif;
   transition: 0.3s ease;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
 }
 
-/* 🌙 Dark Mode */
+/* 🌙 Dark mode */
 body.dark {
   background: linear-gradient(135deg, #1b1b1b, #252525);
   color: #f5f5f5;
 }
 
-/* ===========================================================
-   🔹 HEADER — Logo, Slogan, dan Tema
-   =========================================================== */
+/* HEADER */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
-  max-width: 850px;
-  padding: 1.2rem 2rem;
-  background: rgba(255,255,255,0.15);
+  width: 100%;
+  max-width: 700px;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-  margin: 1.5rem 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
 }
 
 header h1 {
+  font-size: 1.6rem;
   font-weight: 700;
-  font-size: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 header span {
   font-weight: 400;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   opacity: 0.8;
 }
 
@@ -65,50 +56,43 @@ header span {
   gap: 0.5rem;
 }
 
-/* ===========================================================
-   💰 SALDO
-   =========================================================== */
-#balance {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-top: 0.3rem;
-}
-
+/* SALDO */
 main {
+  width: 100%;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 100%;
 }
 
-/* ===========================================================
-   🧾 FORM TRANSAKSI
-   =========================================================== */
+#balance {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0.5rem 0 2rem 0;
+}
+
+/* FORM TRANSAKSI */
 form {
-  width: 320px;
+  width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  padding: 1.5rem;
+  gap: 0.9rem;
+  padding: 1.8rem;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(12px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
-
-form:hover {
-  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 input, select {
-  padding: 0.8rem;
+  padding: 0.8rem 1rem;
   border-radius: 12px;
   border: none;
   outline: none;
   font-size: 0.95rem;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 button {
@@ -124,38 +108,40 @@ button {
 
 button:hover {
   transform: scale(1.03);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ===========================================================
-   📊 CHART AREA
-   =========================================================== */
-.chart-container {
-  background: rgba(255,255,255,0.3);
-  border-radius: 20px;
-  padding: 1rem;
-  width: 340px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+/* TOOLS (Filter + Ekspor) */
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
   margin-top: 1.5rem;
 }
 
-/* ===========================================================
-   📜 DAFTAR TRANSAKSI
-   =========================================================== */
+.tools input[type="date"] {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  border: none;
+}
+
+/* DAFTAR TRANSAKSI */
 ul {
   list-style: none;
   margin-top: 1rem;
-  width: 320px;
+  width: 100%;
+  max-width: 400px;
   padding: 0;
 }
 
 li {
-  background: rgba(255,255,255,0.4);
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(8px);
   border-radius: 12px;
-  padding: 0.8rem 1rem;
-  margin-bottom: 0.5rem;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -166,64 +152,27 @@ li:hover {
   transform: scale(1.01);
 }
 
-.delete {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: 0.2s ease;
-}
-
-.delete:hover {
-  transform: scale(1.2);
-}
-
-/* ===========================================================
-   📁 FILTER DAN EKSPOR
-   =========================================================== */
-.tools {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.tools input[type="date"] {
-  background: rgba(255,255,255,0.6);
-}
-
-.tools button {
-  background: #22577E;
-}
-
-/* ===========================================================
-   💫 FOOTER
-   =========================================================== */
+/* FOOTER */
 footer {
   margin-top: 2.5rem;
-  padding: 1rem;
   font-size: 0.9rem;
-  color: #333;
   opacity: 0.8;
   text-align: center;
 }
 
-footer a {
-  color: inherit;
-  font-weight: 600;
-}
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  form {
+    width: 90%;
+  }
 
-/* ===========================================================
-   🌈 TRANSISI TEMA & WARNA
-   =========================================================== */
-[data-theme="hijau"] {
-  --main: #7bd389;
-}
-[data-theme="pink"] {
-  --main: #f6a6c1;
-}
-[data-theme="ungu"] {
-  --main: #b695f8;
-}
-[data-theme="biru"] {
-  --main: #87bdfd;
+  ul {
+    width: 90%;
+  }
 }
