@@ -176,3 +176,43 @@ footer {
     width: 90%;
   }
 }
+/* ===========================================================
+    🎨 DEFINISI TEMA LAIN (Wajib Ditambahkan)
+    =========================================================== */
+
+/* 💗 PINK THEME */
+body.pink {
+  background: linear-gradient(135deg, #fbcfe8, #f472b6); /* Pink Background */
+  color: #333; /* Warna teks */
+}
+body.pink .btn-add {
+  background: #ec4899; /* Warna Tombol Pink */
+}
+body.pink .glass, body.pink input, body.pink select {
+  /* Sesuaikan glass effect agar kontras di latar belakang pink */
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* 💜 PURPLE THEME */
+body.purple {
+  background: linear-gradient(135deg, #ddd6fe, #a78bfa); /* Purple Background */
+  color: #333;
+}
+body.purple .btn-add {
+  background: #7c3aed; /* Warna Tombol Ungu */
+}
+body.purple .glass, body.purple input, body.purple select {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* 💙 BLUE THEME */
+body.blue {
+  background: linear-gradient(135deg, #bfdbfe, #60a5fa); /* Blue Background */
+  color: #333;
+}
+body.blue .btn-add {
+  background: #3b82f6; /* Warna Tombol Biru */
+}
+body.blue .glass, body.blue input, body.blue select {
+  background: rgba(255, 255, 255, 0.4);
+}
